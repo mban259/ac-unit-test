@@ -46,7 +46,7 @@ function onClick(){
       num += 1;
     } else if (header.indexOf("Output") == 0 || header.indexOf("Выходные данные") == 0) {
       output = data;
-      }
+    }
     
     if (name != null && input != null && output != null) {
       io.push({ name: name, input: input, output: output });
