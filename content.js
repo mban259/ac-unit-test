@@ -109,7 +109,7 @@ function createMSTest(io){
 using System;
 using System.IO;
 
-namespace AtCoder
+namespace Codeforces
 {
     [TestClass]
     public class ProgramTest
