@@ -221,7 +221,7 @@ class MainTest {
         val sysOut = ByteArrayOutputStream()
         System.setOut(PrintStream(sysOut))
 
-        abc000X()
+        cf0000X()
 
         Assert.assertThat(sysOut.toString(), equalTo(output + System.lineSeparator()))
     }
