@@ -39,12 +39,12 @@ function onClick(){
     var header = children[0].firstChild.textContent.trim();
     var data = children[1].firstChild.textContent.trim();
   
-    if (header.indexOf("Input") == 0) {
+    if (header.indexOf("Input") == 0 || header.indexOf("Входные данные") == 0) {
       // Input0
       name = header.replace(/\s+/g, "_") + num;
       input = data;
       num += 1;
-    } else if (header.indexOf("Output") == 0) {
+    } else if (header.indexOf("Output") == 0 || header.indexOf("Выходные данные") == 0) {
       output = data;
       }
     
