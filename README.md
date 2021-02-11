@@ -1,11 +1,6 @@
-# AtCoder Unit Test
+# Codeforces Unit Test
 
-AtCoder の問題ページから、ユニットテストを生成する Firefox / Google Chrome アドオンです。
-
-## ダウンロード
-
-* Firefox 版： [AC Unit Test :: Add-ons for Firefox](https://addons.mozilla.org/firefox/addon/ac-unit-test/ "AC Unit Test :: Add-ons for Firefox")
-* Google Chrome 版： [AC Unit Test - Chrome ウェブストア](https://chrome.google.com/webstore/detail/lmahhninbclefepjbcdfbcjnancipfmi/ "AC Unit Test - Chrome ウェブストア")
+Codeforces の問題ページから、ユニットテストを生成する Firefox / Google Chrome アドオンです。
 
 ## 対応言語
 
@@ -14,12 +9,12 @@ AtCoder の問題ページから、ユニットテストを生成する Firefox 
 * C# (MS Test)
 * Python3 (unittest)
 
-対応言語の切り替えは、拡張機能 / アドオン → AC Unit Test の「オプション」で行えます。  
+対応言語の切り替えは、拡張機能 / アドオン → Codeforces Unit Test の「オプション」で行えます。  
 ※デフォルトでは`Java (JUnit)`になっています。
 
 ## 使い方
 
-1. AtCoder の問題ページを開く
+1. Codeforces の問題ページを開く
 2. 右クリック → `ユニットテストを生成` をクリック
 
 これで、ユニットテストがクリップボードにコピーされました！
@@ -33,17 +28,17 @@ AtCoder の問題ページから、ユニットテストを生成する Firefox 
     * 問題を解く関数の名前を `resolve` にする必要があります。
 * Kotlin
     * 問題を解くメソッドの名前をパッケージ内で一意の名前にした上で、`main`はその関数を呼ぶのみの作りになっている必要があります。  
-    また、生成されたテストコードの`abc000X()`をテスト対象のメソッドに書き換える必要があります。
+    また、生成されたテストコードの`cf0000X()`をテスト対象のメソッドに書き換える必要があります。
     
             fun main(args: Array<String>) {
-                abc123A()
+                cf1234A()
             }
             
-            fun abc123A() {
+            fun cf1234A() {
                 // 実装
             }
             
-    (AtCoderの制約上、トップレベル関数の`main`が呼び出されることを想定した実装をする必要があるが、同じパッケージ内にトップレベル関数で同じ名前のメソッド(ここでは`main`)が定義されているとテストコード側で区別ができずコンパイルエラーとなってしまうため。(もっとベターな方法はあるかも))
+
 
 ## （参考）eclipse でのユニットテスト作成＆実行方法
 
@@ -53,14 +48,14 @@ AtCoder の問題ページから、ユニットテストを生成する Firefox 
     * パッケージ: (空欄)
     * 名前: MainTest
 3. "新規 JUnit テスト・ケース" ダイアログが表示されたら、"次のアクションを実行 (JUnit 4 ライブラリーをビルド・パスに追加)" を選択し、"OK" ボタンをクリック
-4. AtCoder の問題ページを開いて、右クリック → "ユニットテストを生成" をクリック
+4. Codeforces の問題ページを開いて、右クリック → "ユニットテストを生成" をクリック
 5. MainTest.java 上で右クリック → "実行" → "JUnit テスト" をクリック
 
 ## (参考) IntelliJでのKotlinのユニットテスト作成&実行方法
 1. テスト対象のクラスの`main`メソッドにキーボードカーソルを載せ、`Alt+Enter` → `テストの作成`をクリック
     1. `Alt+Enter`の代わりに`Alt+Insert`→`テスト`、もしくは`main`メソッドを右クリック→`生成`→`テスト`でも可
 2. よしなに作成してくれるので、テストファイルのパッケージ宣言(1行目)より下を、このツールで生成したテストケースに全て置き換える
-3. `assertIO`メソッド内の`abc000X()`をテスト対象の`abc123A()`などに書き換える。
+3. `assertIO`メソッド内の`cf0000X()`をテスト対象の`cf1234A()`などに書き換える。
 4. テストクラス/テストケースの左にある緑矢印を左クリック or タブ一覧でテストケースを右クリックし、テストを実行する
 
 ## License
