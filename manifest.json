@@ -12,8 +12,7 @@
   },
   
   "permissions" : [
-    "*://*.contest.atcoder.jp/tasks/*",
-    "*://atcoder.jp/contests/*/tasks/*",
+    "https://codeforces.com/contest/*/*/*",
     "contextMenus",
     "clipboardWrite",
     "storage"
@@ -30,8 +29,7 @@
   "content_scripts": [
         {
             "matches": [
-                "*://*.contest.atcoder.jp/tasks/*",
-                "*://atcoder.jp/contests/*/tasks/*"
+                "https://codeforces.com/contest/*/*/*"
             ],
             "js": [
                 "jquery-3.3.1.min.js",
