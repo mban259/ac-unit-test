@@ -37,7 +37,7 @@ function onClick(){
     var sample_test = $(sample_tests[i]);
     var children = sample_test[0].children;
     var header = children[0].firstChild.textContent.trim();
-    var data = children[1].firstChild.textContent.trim();
+    var data = children[1].innerText.trim();
   
     if (header.indexOf("Input") == 0 || header.indexOf("Входные данные") == 0) {
       // Input0
