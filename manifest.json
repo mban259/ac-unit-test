@@ -13,6 +13,8 @@
   
   "permissions" : [
     "https://codeforces.com/contest/*/problem/*",
+    "https://codeforces.com/problemset/problem/*",
+    "https://codeforces.com/gym/*/problem/*",
     "contextMenus",
     "clipboardWrite",
     "storage"
@@ -29,7 +31,9 @@
   "content_scripts": [
         {
             "matches": [
-                "https://codeforces.com/contest/*/problem/*"
+                "https://codeforces.com/contest/*/problem/*",
+                "https://codeforces.com/problemset/problem/*",
+                "https://codeforces.com/gym/*/problem/*"
             ],
             "js": [
                 "jquery-3.3.1.min.js",

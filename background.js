@@ -4,7 +4,9 @@ chrome.contextMenus.create({
     "id": "createUnitTest",
     "contexts" : ["page"],
     "documentUrlPatterns": [
-        "https://codeforces.com/contest/*/problem/*"
+        "https://codeforces.com/contest/*/problem/*",
+        "https://codeforces.com/problemset/problem/*",
+        "https://codeforces.com/gym/*/problem/*"
     ]
 });
 
